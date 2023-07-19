@@ -8,12 +8,12 @@ import jdk.nashorn.internal.objects.annotations.Setter;
  */
 public class Encap {
     public static void main(String[] args) {
-        P1 p=new P1();
-        p.setName("zxb");
-        p.setAge(18);
-        p.setSalary(10000);
-        p.info();
-        System.out.println(p.getSalary());
+//        P1 p=new P1();
+//        p.setName("zxb");
+//        p.setAge(18);
+//        p.setSalary(10000);
+//        p.info();
+//        System.out.println(p.getSalary());
         P1 smith = new P1("smithaa", 1800, 100000);
         smith.info();
     }
@@ -22,7 +22,9 @@ public class Encap {
 class P1{
     public String name;
     private int age;
-    public P1(){}
+    public P1(){
+        System.out.println("无参构造器被调用...");
+    }
     public P1(String name,int age,double salary){
         setName(name);
         setAge(age);
